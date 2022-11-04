@@ -27,8 +27,19 @@ def num_within(num, min, max):
     else:
         print('False')
 
-# Pascals Triangle? The solution code is far advanced from where we are in the class.
-# No way would I have got this solution.
+
+# 5 sample from another site.
+def pascal(n):
+    for i in range(n+1):
+        for j in range(n-i):
+            print(' ', end='')
+
+        C = 1
+        for j in range(1, i+1):
+            print(C, ' ', sep='', end='')
+            C = C * (i - j) // j
+        print()
+
 
 # ---------------------------------------------
 # 1
@@ -40,6 +51,8 @@ def num_within(num, min, max):
 # 3
 #rev_string('This is forward.')
 
-
 # 4
 #num_within(3, 2, 4)
+# 5
+
+pascal(50)
